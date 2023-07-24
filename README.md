@@ -50,11 +50,17 @@ This is a docker and tutorial for edge device.
 
 
 ## Result table
-| porject | platform | status | comments |
-| ------- | -------- | ------ | -------- |
-| motion detector | amd64 | ok | No cuda |
-|                 | arm64 | ok | 1. use --runtime=nvidia instead of --gpus all 2. can't show display |
-| object counter  | amd64 | ok | CUDA 11.4 |
-|                 | arm64 | failed | CUDA version 10.2 failed to run code |
-| sound detector  | amd64 | ok | No cuda |
-|                 | arm64 | ok | No cuda |
+| porject | arch. | platform | status | comments |
+| ------- | -------- | ------ | ------ | -------- |
+| motion detector | amd64 | Ubuntu host | ok | No gpu used in code |
+|                 | arm64 | Jetson Nano | ok | (No gpu used in code) 1. use --runtime=nvidia instead of --gpus all 2. can't show display |
+|                 | arm64 | Jetson Xavier | ok | (No gpu used in code) 1. use --runtime=nvidia instead of --gpus all 2. can't show display |
+|                 | arm64 | Jetson TX2 | ok | (No gpu used in code) 1. use --runtime=nvidia instead of --gpus all 2. can't show display |
+| object counter  | amd64 | Ubuntu host | ok | CUDA 11.4, different image between amd64 and arm64 |
+|                 | arm64 | Jetson Nano | failed | CUDA version 10.2 failed to run code, use newer image(CUDA 11.4) will cause another error from opencv |
+|                 | arm64 | Jetson Xavier | failed | CUDA version 10.2 failed to run code, use newer image(CUDA 11.4) will cause another error from opencv |
+|                 | arm64 | Jetson TX2 | failed | CUDA version 10.2 failed to run code, use newer image(CUDA 11.4) will cause another error from opencv |
+| sound detector  | amd64 | Ubuntu host | ok | No cuda used |
+|                 | arm64 | Jetson Nano | ok | No cuda used |
+|                 | arm64 | Jetson Xavier | ok | No cuda used |
+|                 | arm64 | Jetson TX2 | ok | No cuda used |

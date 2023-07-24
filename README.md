@@ -52,7 +52,7 @@ This is a docker and tutorial for edge device.
 ## Result table
 | porject | platform | status | comments |
 | ------- | -------- | ------ | -------- |
-| motion detector | amd64 | ok |         |
+| motion detector | amd64 | ok | No cuda |
 |                 | arm64 | ok | 1. use --runtime=nvidia instead of --gpus all 2. can't show display |
 | object counter  | amd64 | ok | CUDA 11.4 |
 |                 | arm64 | failed | CUDA version 10.2 failed to run code |

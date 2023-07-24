@@ -1,4 +1,4 @@
-# EdgeDeviceDocker
+und# EdgeDeviceDocker
 This is a docker and tutorial for edge device.
 - ubuntu 20.04 PC
     - Docker version 24.0.1
@@ -56,3 +56,5 @@ This is a docker and tutorial for edge device.
 |                 | arm64 | ok | 1. use --runtime=nvidia instead of --gpus all 2. can't show display |
 | object counter  | amd64 | ok | CUDA 11.4 |
 |                 | arm64 | failed | CUDA version 10.2 failed to run code |
+| sound detector  | amd64 | ok | No cuda |
+|                 | arm64 | ok | No cuda |
